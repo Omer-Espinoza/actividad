@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="margin">5dp</dimen>
+    <dimen name="samll">12sp</dimen>
+    <dimen name="normal">14sp</dimen>
+    <dimen name="medium">16sp</dimen>
+    <dimen name="big">18sp</dimen>
+    <dimen name="very_big">24sp</dimen>
+</resources>

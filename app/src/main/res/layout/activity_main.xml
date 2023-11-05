@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!--    HEADER-->
+
+    <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:background="@color/black"
+    >
+
+        <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ripley"
+                android:contentDescription="@string/logo_description"
+                android:layout_gravity="center_vertical"
+
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/header"
+                android:textSize="@dimen/very_big"
+                android:textColor="@color/white"
+                android:padding="@dimen/padding"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+        />
+    </LinearLayout>
+
+    <!--        MAIN-->
+
+    <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/header"
+            android:padding="16dp"
+    >
+        
+        <TextView
+                android:id="@+id/textViewCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:layout_marginVertical="@dimen/margin"
+                android:textSize="@dimen/medium"
+                android:textStyle="bold"
+
+        />
+
+        <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin"
+        />
+
+        <TextView
+                android:id="@+id/textViewAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/amout"
+                android:layout_marginVertical="@dimen/margin"
+                android:textSize="@dimen/medium"
+                android:textStyle="bold"
+
+        />
+
+        <EditText
+                android:id="@+id/editTextAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/zero_soles"
+                android:layout_marginVertical="@dimen/margin"
+
+        />
+
+        <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"
+                android:background="@color/purple"
+                android:layout_marginVertical="@dimen/margin"
+                android:textSize="@dimen/medium"
+                android:textStyle="bold"
+        />
+    </LinearLayout>
+
+    <!--    RESULT-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding"
+    >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+            <TextView
+                    android:id="@+id/textViewIGV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/igv"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/gray"
+            />
+
+            <TextView
+                    android:id="@+id/textViewAmountNoDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/without_discount"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/gray"
+            />
+            <TextView
+                    android:id="@+id/textViewDiscountPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentage"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/gray"
+            />
+            <TextView
+                    android:id="@+id/textViewAmountWithDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/with_discount"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/gray"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/IGV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/zero_soles"
+                    android:gravity="end"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/black"
+            />
+
+            <TextView
+                    android:id="@+id/AmountNoDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/zero_soles"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/black"
+            />
+            <TextView
+                    android:id="@+id/DiscountPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/zero_percentage"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/black"
+            />
+            <TextView
+                    android:id="@+id/AmountWithDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/zero_soles"
+                    android:layout_marginVertical="@dimen/margin"
+                    android:textSize="@dimen/normal"
+                    android:textColor="@color/black"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
